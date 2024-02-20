@@ -56,3 +56,10 @@ const replaceFoundChars = (guess) => {
      output.innerHTML = maskedWord
 }
 
+const win = () => {
+     alert(`You have guessed right, the word is ${randomizeWord}.`)
+     newGame()
+}
+const replaceFoundChars = (guess) => {
+     
+}
