@@ -35,7 +35,7 @@ input.addEventListener('keypress',(e) => {
           if(guess.toLowerCase() === randomizeWord.toLowerCase()){
 
           } else if (guess.length === 1){
-               
+               replaceFoundChars(guess)
           }else{
 
           }
