@@ -14,3 +14,14 @@ const words = [
      "asynchronous",
      "hypertext"
 ]
+
+let randomizeWord = ''
+let maskedWord = ''
+
+const newGame = () => {
+     const random = Math.floor(Math.random() * 10) + 1
+     randomizeWord = words[random]
+     maskedWord ="*".repeat(randomizeWord.length)
+     console.log(randomizeWord)
+     output.innerHTML = maskedWord
+}
