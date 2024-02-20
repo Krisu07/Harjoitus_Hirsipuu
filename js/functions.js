@@ -42,3 +42,17 @@ input.addEventListener('keypress',(e) => {
           input.value=''
      }
 })
+
+const replaceFoundChars = (guess) => {
+     for(let i = 0; i<randomizeWord.length;i++){
+          const char = randomizeWord.substring(i,i+1)
+          if(char===guess){
+               let newString = maskedWord.split('')
+               newString.splice(i,1,guess)
+               newString = newString.join('')
+               maskedWord = newString
+          }
+     }
+     output.innerHTML = maskedWord
+}
+
