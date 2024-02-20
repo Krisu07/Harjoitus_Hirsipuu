@@ -25,3 +25,4 @@ const newGame = () => {
      console.log(randomizeWord)
      output.innerHTML = maskedWord
 }
+newGame()
