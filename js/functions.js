@@ -26,3 +26,19 @@ const newGame = () => {
      output.innerHTML = maskedWord
 }
 newGame()
+
+input.addEventListener('keypress',(e) => {
+     if(e.key === 'Enter'){
+          e.preventDefault()
+
+          const guess = input.value
+          if(guess.toLowerCase() === randomizeWord.toLowerCase()){
+
+          } else if (guess.length === 1){
+               
+          }else{
+
+          }
+          input.value=''
+     }
+})
