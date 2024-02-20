@@ -33,16 +33,24 @@ input.addEventListener('keypress',(e) => {
 
           const guess = input.value
           if(guess.toLowerCase() === randomizeWord.toLowerCase()){
-
+               win()
           } else if (guess.length === 1){
                replaceFoundChars(guess)
-          }else{
-
+          if (maskedWord.toLocaleLowerCase() === randomizeWord.toLocaleLowerCase()){
+               win()   
+          } else {
+               alert("You guessed wrong!")
           }
           input.value=''
      }
-})
+}
 
+const win = () => {
+     alert(`You have guessed right, the word is ${randomizeWord}.`)
+     newGame()
+}
+
+})
 const replaceFoundChars = (guess) => {
      for(let i = 0; i<randomizeWord.length;i++){
           const char = randomizeWord.substring(i,i+1)
@@ -54,12 +62,4 @@ const replaceFoundChars = (guess) => {
           }
      }
      output.innerHTML = maskedWord
-}
-
-const win = () => {
-     alert(`You have guessed right, the word is ${randomizeWord}.`)
-     newGame()
-}
-const replaceFoundChars = (guess) => {
-     
 }
